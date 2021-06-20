@@ -1,0 +1,66 @@
+.Header form input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 4px;
+}
+
+.Card {
+  width: 400px;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #e1e8ed;
+  border-radius: 10px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.Card-Image {
+  display: inline-block;
+  margin: 20px;
+}
+
+.Card-Image img {
+  background: no-repeat center;
+  background-size: cover;
+  border-radius: 10px;
+  max-width: 50%;
+}
+
+.Card-Content h1 {
+  font-size: medium;
+  font-weight: bold;
+}
+
+/*
+.Card .Card-Header {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.Card .Card-SubTitle {
+  color:#282c34;
+  font-size: small;
+}
+
+.Card .Card-Content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
+}
+
+.Card .Card-Bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.Card .Card-Bottom a{
+  padding-inline: 10%;
+}*/
