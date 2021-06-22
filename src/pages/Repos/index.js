@@ -10,10 +10,13 @@ function Repos() {
   const { params } = useRouteMatch();
   let history = useHistory();
   
-  useEffect(async () => {
-    const response = await fetch('https://api.github.com/users/' + encodeURI(params.user) + '/repos' );
-    const json = await response.json();
-    setRepos(json);
+  useEffect(() => {
+    const exec = async() => {
+      const response = await fetch('https://api.github.com/users/' + encodeURI(params.user) + '/repos' );
+      const json = await response.json();
+      setRepos(json);
+    };
+    exec();
   }, [params.user]);
 
   const routeChange = () =>{ 

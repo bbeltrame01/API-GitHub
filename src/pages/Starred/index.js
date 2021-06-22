@@ -10,10 +10,13 @@ function Starred() {
   const { params } = useRouteMatch();
   let history = useHistory();
 
-  useEffect(async () => {
-    const response = await fetch('https://api.github.com/users/' + encodeURI(params.user) + '/starred' );
-    const json = await response.json();
-    setStarred(json);
+  useEffect(() => {
+    const exec = async() => {
+      const response = await fetch('https://api.github.com/users/' + encodeURI(params.user) + '/starred' );
+      const json = await response.json();
+      setStarred(json);
+    };
+    exec();
   }, [params.user]);
 
   return(

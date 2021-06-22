@@ -35,12 +35,11 @@ function Main() {
           />
         </form>
       </div>
-      {console.log(user)}
 
       <div className="Content"> 
       {user.id > 0 && (             
         <div className="Card-User">
-          <img src={user.avatar_url}/>
+          <img src={user.avatar_url} alt={user.login}/>
           <div className="Card-Content">
             <div>
               <h1>{user.name}</h1>
