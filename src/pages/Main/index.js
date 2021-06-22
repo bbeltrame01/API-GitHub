@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import '../style.css';
 import './style.css';
 
@@ -17,15 +16,6 @@ function Main() {
         setUser(json);
       };
       exec();
-    }
-  }
-
-  const handleClick = (e) => {
-    var username = e.login;
-
-    if (username != ''){
-      let path = '/' + encodeURI(username) + '/repos';
-      
     }
   }
   
@@ -45,23 +35,40 @@ function Main() {
           />
         </form>
       </div>
+      {console.log(user)}
 
-      <div className="Content">      
-        <div className="Card">
-          <div className="Card-Image">
-            <img src={user.avatar_url}/>
-          </div>
+      <div className="Content"> 
+      {user.id > 0 && (             
+        <div className="Card-User">
+          <img src={user.avatar_url}/>
           <div className="Card-Content">
-            <h1>{user.name}</h1>
-            <div className='Profile-Login'>{user.login}</div>          
-            <Button href={user.login + "/repos"} block>
-              Repos
-            </Button>
-            <Button href={user.login + "/starred"} block>
-              Starred
-            </Button>
+            <div>
+              <h1>{user.name}</h1>
+              <p>{user.login}</p>
+            </div>
+            <table className="Card-table">
+              <thead>
+                <th>Followers</th>
+                <th>Following</th>
+                <th>Repositories</th>
+              </thead>
+              <tbody>
+                <td>{user.followers}</td>
+                <td>{user.following}</td>
+                <td>{user.public_repos}</td>
+              </tbody>
+            </table>
+            <div className="Card-Buttons">        
+              <Button href={user.login + "/repos"}>
+                Repos
+              </Button>
+              <Button href={user.login + "/starred"}>
+                Starred
+              </Button>
+            </div>
           </div>
         </div>
+        )}
       </div>
     </>
   );

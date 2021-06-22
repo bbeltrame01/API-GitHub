@@ -4,63 +4,63 @@
   border-radius: 4px;
 }
 
-.Card {
-  width: 400px;
-  border: none;
-  background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.Card-User {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  width: 450px; 
+  padding: 10px;
   border: 1px solid #e1e8ed;
-  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  border-radius: 4px;  
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: flex;
+  margin-top: 15px;
 }
 
-.Card-Image {
-  display: inline-block;
-  margin: 20px;
-}
-
-.Card-Image img {
-  background: no-repeat center;
-  background-size: cover;
+.Card-User img {
   border-radius: 10px;
   max-width: 50%;
 }
 
+.Card-Content {
+  display: flex;
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  align-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .Card-Content h1 {
-  font-size: medium;
+  font-size: 20px;
   font-weight: bold;
+  margin: 0;
 }
 
-/*
-.Card .Card-Header {
-  font-weight: bold;
-  font-size: medium;
-}
-
-.Card .Card-SubTitle {
-  color:#282c34;
+.Card-Content p {
   font-size: small;
+  font-weight: 200;
+  margin: 0;
 }
 
-.Card .Card-Content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: left;
+.Card-table {
+  display: inline-table;
+  background-color: #f2f5f8;
+  font-size: 12px;
+  font-weight: 200;
+  border-radius: 5px;
   width: 100%;
 }
 
-.Card .Card-Bottom {
+.Card-Buttons {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-around;
-  margin-top: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Card .Card-Bottom a{
-  padding-inline: 10%;
-}*/
+.Card-Buttons a {
+  margin-right: 10px;
+}

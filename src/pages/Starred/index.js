@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { useHistory, useRouteMatch } from "react-router-dom";
+import { format } from 'date-fns';
 import '../style.css';
 import './style.css';
 
@@ -40,7 +41,7 @@ function Starred() {
                     <tr>
                       <td>{rep.name}</td>
                       <td>{rep.description}</td>
-                      <td>{rep.created_at}</td>
+                      <td>{format(new Date(rep.created_at),"dd/MM/yyyy', às ' HH:mm'h'")}</td>
                     </tr>
                   );
                 })

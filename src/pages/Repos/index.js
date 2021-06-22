@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import { useHistory, useRouteMatch, Link } from "react-router-dom";
+import { useHistory, useRouteMatch } from "react-router-dom";
+import { format } from 'date-fns';
 import '../style.css';
 import './style.css';
 
@@ -19,6 +20,7 @@ function Repos() {
     let path = '/'; 
     history.push(path);
   }
+
 
   return(
     <>
@@ -44,7 +46,7 @@ function Repos() {
                     <tr key={rep.id}>
                       <td>{rep.name}</td>
                       <td>{rep.description}</td>
-                      <td>{rep.created_at}</td>
+                      <td>{format(new Date(rep.created_at),"dd/MM/yyyy', às ' HH:mm'h'")}</td>
                     </tr>
                   );
                 })
