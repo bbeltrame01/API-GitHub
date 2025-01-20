@@ -1,37 +1,92 @@
-.Header form input {
-  padding: 10px;
-  width: 250px;
-  border-radius: 4px;
+/* Estilo para o cabeçalho */
+.Header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
+.Header .Buttons Button{
+  margin: 5px;
+}
+
+.Header form input {
+  padding: 10px;
+  width: 550px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.Header form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.searchBox {
+  display: flex;
+  align-items: baseline;
+}
+
+.searchType {
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchType label {
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.searchType input[type="radio"] {
+  margin-right: 5px;
+}
+
+/* Estilo para mensagem inicial */
+.WelcomeMessage {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+}
+
+.WelcomeMessage h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.WelcomeMessage p {
+  font-size: 1.2rem;
+}
+
+/* Estilo para o card do usuário */
 .Card-User {
   display: flex;
   flex-wrap: nowrap;
   align-content: stretch;
-  width: 450px; 
+  width: 450px;
   padding: 10px;
   border: 1px solid #e1e8ed;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  border-radius: 4px;  
-  -moz-box-sizing: border-box;
+  border-radius: 4px;
   box-sizing: border-box;
-  margin-top: 15px;
+  margin: 20px auto; /* Centraliza o card */
 }
 
 .Card-User img {
   border-radius: 10px;
-  max-width: 50%;
+  max-width: 100px; /* Limita a largura da imagem */
+  max-height: 100px;
+  object-fit: cover;
 }
 
 .Card-Content {
   display: flex;
-  position: relative;
-  top: 0;
-  margin-left: 10px;
-  align-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+  width: 100%;
 }
 
 .Card-Content h1 {
@@ -41,26 +96,92 @@
 }
 
 .Card-Content p {
-  font-size: small;
+  font-size: 14px;
   font-weight: 200;
-  margin: 0;
+  margin: 5px 0;
 }
 
 .Card-table {
-  display: inline-table;
+  margin-top: 10px;
   background-color: #f2f5f8;
   font-size: 12px;
   font-weight: 200;
   border-radius: 5px;
   width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.Card-table th,
+.Card-table td {
+  padding: 5px;
+  border: 1px solid #ddd;
 }
 
 .Card-Buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin-top: 10px;
 }
 
 .Card-Buttons a {
-  margin-right: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.Card-Buttons a:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para a lista de repositórios */
+.Repo-List {
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+}
+
+.Repo-List h2 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.Repo-List ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Repo-Item {
+  padding: 15px;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.Repo-Item:hover {
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+.Repo-Item a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.Repo-Item a:hover {
+  text-decoration: underline;
+}
+
+.Repo-Item p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
 }
